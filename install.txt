@@ -1,0 +1,26 @@
+Installing the QIn skin for Roundcube Webmail
+==============================================
+
+1. Copy the skin folder into your Roundcube installation:
+
+   cp -r QIn /path/to/roundcubemail/skins/QIn
+
+2. Add the following to config/config.inc.php:
+
+   $config['skin'] = 'QIn';
+   $config['skin_logo'] = 'skins/QIn/images/logo.svg';
+
+3. That's it. No database changes or build steps required.
+   The compiled CSS files are already included.
+
+Users can also switch skins from:
+   Settings > User Interface > Interface skin
+
+To rebuild CSS from source (optional):
+
+   cd skins/QIn
+   npm init -y && npm install less less-plugin-clean-css
+   npx lessc --clean-css="--s1 --advanced" styles/styles.less styles/styles.min.css
+   npx lessc --clean-css="--s1 --advanced" styles/print.less styles/print.min.css
+   npx lessc --clean-css="--s1 --advanced" styles/embed.less styles/embed.min.css
+   rm -rf node_modules package.json package-lock.json
