@@ -1,9 +1,9 @@
 {
-    "name": "cherubimro/qin",
+    "name": "cherubimro/roundcube-qin-theme",
     "description": "A Klingon-themed dark skin for Roundcube Webmail based on Elastic",
     "license": "CC-BY-SA-4.0",
     "type": "roundcube-skin",
-    "homepage": "https://github.com/cherubimro/QIn",
+    "homepage": "https://github.com/cherubimro/roundcube-QIn-theme",
     "authors": [
         {
             "name": "Alin-Adrian Anton",
